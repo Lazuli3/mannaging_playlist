@@ -58,10 +58,10 @@ class Playlist:
     def retornar_playlist(self):
         nome = input('Insira o nome da playlist que você quer ver: ')
         encontrada = False
-        for v in self.playlist:
+        for v in self.playlist.copy():
             if v['playlist'].lower() == nome.lower():
                 print(v)
-                break
+                return
         if not encontrada:
             print('Essa playlist não existe.')
 
